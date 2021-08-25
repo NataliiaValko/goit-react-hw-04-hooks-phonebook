@@ -10,11 +10,13 @@ const ContactForm = ({ onSubmit }) => {
 
     switch (prop) {
       case 'name':
-        return setName(e.currentTarget.value);
+        setName(e.currentTarget.value);
+        break;
       case 'number':
-        return setNumber(e.currentTarget.value);
+        setNumber(e.currentTarget.value);
+        break;
       default:
-        return;
+        throw new Error();
     }
   };
 
