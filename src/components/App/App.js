@@ -56,7 +56,7 @@ const App = () => {
     setContacts(prev => prev.filter(contact => contact.id !== contactId));
   };
 
-  const handlerFilterValue = e => {
+  const handleFilterValue = e => {
     setFilter(e.currentTarget.value.trim());
   };
 
@@ -84,7 +84,7 @@ const App = () => {
       </Section>
       <Section nameForClass={'sectionList'}>
         <h2 className={s.titleContacts}>Contacts</h2>
-        <Filter name={filter} onChange={handlerFilterValue} />
+        <Filter name={filter} onChange={handleFilterValue} />
         {contacts[0] && getResultSearch()[0] ? (
           <ContactList
             contacts={getResultSearch()}
